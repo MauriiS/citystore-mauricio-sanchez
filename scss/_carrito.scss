@@ -1,0 +1,101 @@
+@import "mixins";
+
+.grid-carrito {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+	"header header"
+	"section__carrito section__carrito"
+	"footer footer";
+		.section__carrito {
+			grid-area: section__carrito;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			align-content: center;
+			align-items: stretch;
+		}
+
+		.carrito {
+			margin-bottom: 15px;
+			width: 90%;
+			background-color: #f8f9fa;
+			border: 1px solid #ced4da;
+			border-collapse: collapse;
+		}
+
+		.carrito th {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			border-width: 0;
+			text-align: inherit;
+		}
+
+		.carrito tr {
+			border-right: 0;
+		}
+
+		.carrito td {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			vertical-align: inherit;
+		}
+
+		.cantidad {
+			padding: 5px;
+			border: 1px solid #ced4da;
+		}
+
+		.codigo-postal {
+			@extend .cantidad;
+		}
+
+		.button-eliminar {
+			@include color-fondo(#0a65f7);
+			border: 1px solid #000;
+			padding: 4px;
+			transition: all 0.75s;
+		}
+
+		.button-eliminar:hover {
+			color: #ccc;
+			@include color-fondo(#06409c);
+		}
+
+		.final-carrito {
+			@include color-fondo(#f8f9fa);
+			margin-bottom: 15px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+
+		.codigo__div {
+			margin-bottom: 15px;
+		}
+
+		.codigo__div--input {
+			@extend .cantidad;
+		}
+
+		.button-carrito {
+			@include color-fondo(#0a65f7);
+			border: solid 1px;
+			padding: 10px;
+			box-shadow: 0 3px 1px -2px, 0 2px 2px 0;
+			transition: all 0.75s;
+		}
+
+		.button-carrito:hover {
+			@include color-fondo(#06409c);
+		}
+
+		.button-carrito a {
+			text-decoration: none;
+			color: #000;
+			transition: all 0.75s;
+		}
+
+		.button-carrito a:hover {
+			color: #ccc;
+		}
+}

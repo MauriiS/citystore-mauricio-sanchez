@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Keywords -->
+	<meta name="keywords" content="citystore, productos de pc, tarjetas de video, memoria ram, disco, disco ssd, gabinete, fuente, procesador, monitor">
+	<!-- Descripción de la página -->
+	<meta name="description" content="Tus productos seleccionados para la compra en tu Carrito.">
+	<!-- CSS File -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- Favicon -->
+	<link rel="icon" href="multimedia/logo.png">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+	<title>Carrito</title>
+</head>
+
+<body>
+	<div class="grid-carrito">
+		<!-- Empieza barra de menú -->
+		<header class="header">
+			<h1 class="h1__logo"><a href="index.html">CityStore</a></h1>
+			<nav class="nav">	
+				<ul class="nav__ul">
+					<li class="nav__li"><a href="index.html">Inicio</a></li>
+					<li class="nav__li"><a href="productos.html">Productos</a></li>
+					<li class="nav__li"><a href="descuentos.html">Descuentos</a></li>
+					<li class="nav__li"><a href="carrito.html">Carrito</a></li>
+					<li class="nav__li"><a href="contacto.html">Contacto</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- Termina barra de menú -->
+		<!-- Empieza main -->
+		<section class="section__carrito">
+			<!-- Empieza el carrito -->
+			<h1>Tu carrito:</h1>
+			<!-- Empieza productos del carrito-->
+			<table border="1" cellpadding="15" cellspacing="0" class="carrito">
+				<th>Producto</th>
+				<th>Cantidad:</th>
+				<th></th>
+				<th>Precio</th>
+				<tr>
+					<td></td>
+					<td>
+						<form>
+							<select class="cantidad">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+							</select>
+						</form>
+					</td>
+					<td><button class="button-eliminar">Eliminar</button></td>
+					<td></td>
+				</tr>
+			</table>
+			<!-- Termina productos del carrito -->
+			<!-- Empieza tipo de envio-->
+			<table border="1" cellpadding="15" cellspacing="0" class="carrito">
+				<th>Envio</th>
+				<th>Codigo Postal</th>
+				<th>Precio</th>
+				<tr>
+					<td>
+						<form>
+							<div>Correo Oca:</div>
+							<label for="domicilio">Domicilio</label>
+							<input type="radio" name="envio" value="domicilio">
+							<label for="sucursal">Sucursal</label>
+							<input type="radio" name="envio" value="sucursal">
+							<div>Correo Andreani:</div>
+							<label for="domicilio">Domicilio</label>
+							<input type="radio" name="envio" value="domicilio">
+							<label for="sucursal">Sucursal</label>
+							<input type="radio" name="envio" value="sucursal">
+							<div>Mensajeria:</div>
+							<label for="domicilio">Domicilio</label>
+							<input type="radio" name="envio" value="domicilio">
+							<label for="sucursal">Sucursal</label>
+							<input type="radio" name="envio" value="sucursal">
+						</form>
+					</td>
+					<td>
+						<form>
+							<input type="text" class="codigo-postal">
+						</form>
+					</td>
+					<td></td>
+				</tr>
+			</table>
+			<!-- Termina tipo de envio-->
+			<!-- Empieza forma de pago-->
+			<table border="1" cellpadding="15" cellspacing="0" class="carrito">
+				<th>Metodo de Pago:</th>
+				<th>Precio Final:</th>
+				<tr>
+					<td>
+						<form>
+							<input type="radio" name="pago" value="deposito">
+							<label for="deposito">Deposito o Transferencia Bancaria</label><br>
+							<input type="radio" name="pago" value="mercado-pago">
+							<label for="mercado-pago">Mercadopago - Tarjetas Online, PagoFacil, RapiPago</label><br>
+							<input type="radio" name="pago" value="tarjetas">
+							<label for="tarjetas">Tarjetas de Credito o Debito - Visa o MasterCard</label>
+						</form>
+					</td>
+					<td></td>
+				</tr>
+			</table>
+			<!-- Termina forma de pago-->
+			<div class="final-carrito">
+				<form class="codigo">
+					<div class="codigo__div">
+						<label for="codigo">¿Tenés un código de descuento?</label>
+						<input type="text" name="codigo" class="codigo__div--input">
+					</div>
+				</form>
+				<button class="button-carrito"><a href="productos.html">Seguir comprando</a></button>
+			</div>
+			<!-- Termina el carrito -->
+		</section>
+		<!-- Termina main -->
+		<!-- Empieza footer -->
+		<footer class="footer">
+			<section class="ayuda">
+				<p class="ayuda__p">Ayuda</p>
+				<p>Si necesitas saber algo</p>
+				<a href="contacto.html" class="ayuda__contacto">Contactanos</a>
+			</section>
+			<section class="redes">
+				<p class="redes__p">Redes:</p>
+				<ul class="redes__ul">
+					<li class="redes__ul--li"><i class="fa-brands fa-instagram-square"></i><a href="https://www.instagram.com/maurii_s1/" target="_BLANK"><b>Instagram</b></a></li>
+					<li class="redes__ul--li"><i class="fa-brands fa-twitter-square"></i><a href="https://twitter.com/zMauriiS" target="_BLANK"><b>Twitter</b></a></li>
+				</ul>
+			</section>
+		</footer>
+		<!-- Termina footer -->
+	</div>
+	<script src="https://kit.fontawesome.com/6a4129c8e3.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

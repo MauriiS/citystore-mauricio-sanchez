@@ -1,0 +1,28 @@
+.grid-productos {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+	"header header"
+	"section__portada section__portada"
+	"section__productos section__productos"
+	"footer footer";
+		.section__portada {
+			grid-area: section__portada;
+		}
+
+		.portada-productos__img {
+			position: relative;
+			width: 100%
+		}
+
+		.titulo-productos {
+			position: absolute;
+			top: 60px;
+			color: #fff;
+			text-shadow: 2px 3px 10px #000;
+		}
+
+		.section__productos {
+			grid-area: section__productos;
+		}
+}

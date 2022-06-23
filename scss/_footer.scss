@@ -1,0 +1,57 @@
+@import "mixins";
+
+.footer {
+	grid-area: footer;
+	@include color-fondo(#0a65f7);
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 100%;
+	bottom: 0;
+		.ayuda {
+			display: inline-block;
+		}
+
+		.ayuda__p {
+			font-size: 22px;
+		}
+
+		.ayuda__contacto {
+			color: #000;
+			transition: all 1s;
+		}
+
+		.ayuda__contacto:hover {
+			color: #bbb;
+		}
+
+		.redes {
+			display: inline-block;
+		}
+
+		.redes__p {
+			font-size: 22px;
+		}
+
+		.redes__ul--li {
+			@extend .redes;
+			font-size: 18px;
+			padding: 8px;
+		}
+
+		.redes__ul--li:hover > a {
+			color: #bbb;
+		}
+
+		.redes__ul--li i {
+			margin-right: 5px;
+		}
+
+		.redes__ul--li a {
+			color: #000;
+			text-decoration: none;
+			transition: all 1s;
+		}
+}

@@ -1,0 +1,34 @@
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+	"header header"
+	"portada-inicio portada-inicio"
+	"nuevos-productos nuevos-productos"
+	"i-descuentos i-descuentos"
+	"novedades novedades"
+	"footer footer";
+		.portada-inicio {
+		grid-area: portada-inicio;
+		}
+		.portada {
+		width: 100%;
+		height: 450px;
+		}
+		.nuevos-productos { 
+		grid-area: nuevos-productos;
+		}
+		.i-descuentos { 
+			grid-area: i-descuentos; 
+		}
+		.iframe-descuentos {
+			width: 100%;
+			height: 480px;
+		}
+		.novedades { 
+			grid-area: novedades; 
+		}
+		.descuentos {
+			color: #000;
+		}
+}

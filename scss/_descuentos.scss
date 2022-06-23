@@ -1,0 +1,28 @@
+.grid-descuentos {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:	
+	"header header"
+	"portada-descuetos portada-descuetos"
+	"section__descuentos section__descuentos"
+	"footer footer";
+		.portada-descuetos {
+			grid-area: portada-descuetos;
+		}
+
+		.portada-descuentos__img {
+			position: relative;
+			width: 100%
+		}
+
+		.titulo-descuentos {
+			position: absolute;
+			top: 60px;
+			color: #fff;
+			text-shadow: 2px 3px 10px #000;
+		}
+
+		.section__descuentos {
+			grid-area: section__descuentos;
+		}
+}

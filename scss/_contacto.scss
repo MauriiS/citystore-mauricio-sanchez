@@ -1,0 +1,86 @@
+.grid-contacto {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+	"header header"
+	"section__contacto section__contacto"
+	"section__preguntas section__preguntas"
+	"footer footer";
+		.section__contacto {
+			grid-area: section__contacto;
+		}
+
+		.section__preguntas {
+			grid-area: section__preguntas;
+		}
+
+		.contacto {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			@include color-fondo(#f8f9fa);
+		}
+
+		.contacto fieldset {
+			margin: 0;
+			padding: 0;
+			border: 0;
+		}
+
+		.contacto__div {
+			padding-left: 10px;
+			margin-bottom: 5px;
+		}
+
+		.contacto__div label {
+			margin-bottom: 3px;
+		}
+
+		.contacto__div--input {
+			display: block;
+			width: 100%;
+			padding: 5px;
+			border: 1px solid #ced4da;
+		}
+
+		.contacto__div--select {
+			@extend .contacto__div--input;
+			margin-left: 10px;
+		}
+
+		.contacto__div--text {
+			@extend .contacto__div--input;
+		}
+
+		.contacto__div--botones {
+			margin-left: 10px;
+			padding: 5px;
+		}
+
+		.preguntas {
+			@include color-fondo(#f8f9fa);
+			border: 1px solid #ced4da;
+			margin: 5px;
+		}
+
+		.preguntas__h {
+			border-bottom: 1px solid #ced4da;	
+			padding: 8px;
+		}
+
+		.preguntas__h:hover {
+			@include color-fondo(#ccc);
+		}
+
+		.preguntas__p {
+			display: none;
+			padding: 10px;
+		}
+
+		.preguntas:hover .preguntas__p {
+			display: block;
+		}
+}

@@ -1,0 +1,36 @@
+@import "mixins";
+
+.header {
+	grid-area: header;
+	@include color-fondo(#0a65f7);
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+		.h1__logo {
+		display: inline-block;
+		font-size: 48px;
+		}
+		.h1__logo a {
+		color: #000;
+		text-decoration: none;
+		}
+		.nav__ul {
+		display: inline-block;
+		}
+		.nav__li {
+		@extend .nav__ul;
+		position:relative;
+		font-size: 22px;
+		padding: 15px;
+		}
+		.nav__li:hover > a {
+		color: #bbb;
+		}
+		.nav__li a {
+		color: #000;
+		text-decoration: none;
+		transition: all 1s;
+		}
+}
