@@ -81,7 +81,8 @@
 
 .productos {
   border: solid 2px;
-  margin-bottom: 8px; }
+  margin-bottom: 8px;
+  background-color: #f8f9fa; }
 
 .productos__img {
   display: inline-block;
