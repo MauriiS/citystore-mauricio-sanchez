@@ -92,7 +92,11 @@
 /*-----------------responsive desing - media quary - mobile last-----------------*/
 /*-----------------tamaño mediano-----------------*/
 
-@media (max-width: 768px) {
+@include media-down() {
+	.nav__input, .nav__label {
+		display: block;
+	}
+
 	.nav__li {
 		padding: 5px;
 	}
@@ -105,24 +109,56 @@
 	.iframe-descuentos {
 		height: 480px;
 	}
+
+	.titulo-productos {
+		display: none;
+	}
+
+	.productos__ul--li {
+		bottom: 0;
+	}
+
+	.productos__img {
+		width: 130px;
+	}
+
+	.titulo-descuentos {
+		display: none;
+	}
+}
+
+/*-----------------tamaño medio-chico-----------------*/
+
+@include media-down-m() {
+	.productos__img {
+		width: 100px;
+	}
 }
 
 /*-----------------tamaño chico-----------------*/
 
-@media (max-width: 375px) {
+@include media-down-sm {
 	.header{
 		flex-direction: column;
 	}
 
 	.portada {
-		height: 200px;
+		display: none;
 	}
 
 	.productos__img {
 		width: 80px;
 	}
 
+	.portada-productos__img {
+		display: none;
+	}
+
 	.titulo-productos {
+		display: none;
+	}
+
+	.portada-descuentos__img {
 		display: none;
 	}
 

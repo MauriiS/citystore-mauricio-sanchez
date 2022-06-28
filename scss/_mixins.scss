@@ -1,3 +1,21 @@
 @mixin color-fondo($fondo) {
 	background-color: $fondo;
 }
+
+@mixin media-down {
+	@media (max-width: 768px) {
+		@content
+	}
+}
+
+@mixin media-down-m {
+	@media (max-width: 576px) {
+		@content
+	}
+}
+
+@mixin media-down-sm {
+	@media (max-width: 375px) {
+		@content
+	}
+}

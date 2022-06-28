@@ -16,6 +16,9 @@
 		color: #000;
 		text-decoration: none;
 		}
+		.nav__input, .nav__label {
+			display: none;
+		}
 		.nav__ul {
 		display: inline-block;
 		}
@@ -24,6 +27,20 @@
 		position:relative;
 		font-size: 22px;
 		padding: 15px;
+		--clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+		}
+		.nav__li:after {
+		content: "";
+		display: block;
+		background: #ccc;
+		width: 90%;
+		height: 3px;
+		margin-top: 3px;
+		clip-path: var(--clippy);
+		transition: clip-path 1s;
+		}
+		.nav__li:hover {
+		--clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 		}
 		.nav__li:hover > a {
 		color: #bbb;
@@ -32,5 +49,17 @@
 		color: #000;
 		text-decoration: none;
 		transition: all 1s;
+		}
+		@include media-down-m() {
+			.nav {
+				display: none;
+			}
+			.nav__label {
+				display: block;
+				cursor: pointer;
+			}
+			.nav__input:checked + .nav {
+				display: block;
+			}
 		}
 }

@@ -20,18 +20,40 @@
   .header .h1__logo a {
     color: #000;
     text-decoration: none; }
+  .header .nav__input, .header .nav__label {
+    display: none; }
   .header .nav__ul, .header .nav__li {
     display: inline-block; }
   .header .nav__li {
     position: relative;
     font-size: 22px;
-    padding: 15px; }
+    padding: 15px;
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%); }
+  .header .nav__li:after {
+    content: "";
+    display: block;
+    background: #ccc;
+    width: 90%;
+    height: 3px;
+    margin-top: 3px;
+    clip-path: var(--clippy);
+    transition: clip-path 1s; }
+  .header .nav__li:hover {
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
   .header .nav__li:hover > a {
     color: #bbb; }
   .header .nav__li a {
     color: #000;
     text-decoration: none;
     transition: all 1s; }
+  @media (max-width: 576px) {
+    .header .nav {
+      display: none; }
+    .header .nav__label {
+      display: block;
+      cursor: pointer; }
+    .header .nav__input:checked + .nav {
+      display: block; } }
 
 /*-----------------main index-----------------*/
 .grid {
@@ -274,7 +296,19 @@
     font-size: 22px; }
   .footer .redes__ul--li {
     font-size: 18px;
-    padding: 8px; }
+    padding: 8px;
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%); }
+  .footer .redes__ul--li:after {
+    content: "";
+    display: block;
+    background: #ccc;
+    width: 90%;
+    height: 3px;
+    margin-top: 3px;
+    clip-path: var(--clippy);
+    transition: clip-path 1s; }
+  .footer .redes__ul--li:hover {
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
   .footer .redes__ul--li:hover > a {
     color: #bbb; }
   .footer .redes__ul--li i {
@@ -288,23 +322,42 @@
 /*-----------------responsive desing - media quary - mobile last-----------------*/
 /*-----------------tamaño mediano-----------------*/
 @media (max-width: 768px) {
+  .nav__input, .nav__label {
+    display: block; }
   .nav__li {
     padding: 5px; }
   .portada {
     width: 100%;
     height: 450px; }
   .iframe-descuentos {
-    height: 480px; } }
+    height: 480px; }
+  .titulo-productos {
+    display: none; }
+  .productos__ul--li {
+    bottom: 0; }
+  .productos__img {
+    width: 130px; }
+  .titulo-descuentos {
+    display: none; } }
+
+/*-----------------tamaño medio-chico-----------------*/
+@media (max-width: 576px) {
+  .productos__img {
+    width: 100px; } }
 
 /*-----------------tamaño chico-----------------*/
 @media (max-width: 375px) {
   .header {
     flex-direction: column; }
   .portada {
-    height: 200px; }
+    display: none; }
   .productos__img {
     width: 80px; }
+  .portada-productos__img {
+    display: none; }
   .titulo-productos {
+    display: none; }
+  .portada-descuentos__img {
     display: none; }
   .titulo-descuentos {
     display: none; }
