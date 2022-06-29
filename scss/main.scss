@@ -4,6 +4,17 @@
 	margin: 0;
 	padding: 0;
 }
+/* -----------------scroll personalizado----------------- */
+
+body::-webkit-scrollbar {
+	background-color: #f8f9fa;
+	width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: #06409c;
+	border-radius: 5px;
+}
 
 /* -----------------header----------------- */
 
@@ -63,7 +74,7 @@
 	border: solid 1px;
 	padding: 4px;
 	box-shadow: 0 3px 1px -2px, 0 2px 2px 0;
-	transition: all 1.25s;
+	transition: all 1s;
 }
 
 .button--add:hover {
@@ -101,11 +112,6 @@
 		padding: 5px;
 	}
 
-	.portada {
-		width: 100%;
-		height: 450px;
-	}
-
 	.iframe-descuentos {
 		height: 480px;
 	}
@@ -122,6 +128,14 @@
 		width: 130px;
 	}
 
+	.portada-productos__img {
+		height: 130px;
+	}
+
+	.portada-descuentos__img {
+		height: 130px;
+	}
+
 	.titulo-descuentos {
 		display: none;
 	}
@@ -132,6 +146,12 @@
 @include media-down-m() {
 	.productos__img {
 		width: 100px;
+	}
+	.portada-productos__img {
+		display: none;
+	}
+	.portada-descuentos__img {
+		display: none;
 	}
 }
 

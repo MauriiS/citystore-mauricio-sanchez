@@ -5,6 +5,15 @@
   margin: 0;
   padding: 0; }
 
+/* -----------------scroll personalizado----------------- */
+body::-webkit-scrollbar {
+  background-color: #f8f9fa;
+  width: 10px; }
+
+body::-webkit-scrollbar-thumb {
+  background-color: #06409c;
+  border-radius: 5px; }
+
 /* -----------------header----------------- */
 .header {
   grid-area: header;
@@ -63,19 +72,30 @@
   .grid .portada-inicio {
     grid-area: portada-inicio; }
   .grid .portada {
-    width: 100%;
-    height: 450px; }
+    width: 100%; }
   .grid .nuevos-productos {
     grid-area: nuevos-productos; }
   .grid .i-descuentos {
     grid-area: i-descuentos; }
+  .grid .nuevo {
+    font-size: 30px;
+    padding-left: 20px; }
+  .grid .desc {
+    font-size: 30px;
+    padding-left: 20px; }
+  .grid .nov {
+    font-size: 30px;
+    padding-left: 20px; }
+  .grid .nov__p {
+    padding-left: 40px; }
   .grid .iframe-descuentos {
     width: 100%;
     height: 730px; }
   .grid .novedades {
     grid-area: novedades; }
   .grid .descuentos {
-    color: #000; }
+    color: #000;
+    padding-left: 40px; }
 
 /*-----------------main productos-----------------*/
 .grid-productos {
@@ -133,7 +153,7 @@
   border: solid 1px;
   padding: 4px;
   box-shadow: 0 3px 1px -2px, 0 2px 2px 0;
-  transition: all 1.25s; }
+  transition: all 1s; }
 
 .button--add:hover {
   color: #ccc;
@@ -178,6 +198,7 @@
   .grid-carrito .carrito th {
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-left: 10px;
     border-width: 0;
     text-align: inherit; }
   .grid-carrito .carrito tr {
@@ -185,6 +206,7 @@
   .grid-carrito .carrito td {
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-left: 10px;
     vertical-align: inherit; }
   .grid-carrito .cantidad, .grid-carrito .codigo-postal, .grid-carrito .codigo__div--input {
     padding: 5px;
@@ -269,6 +291,9 @@
     padding: 10px; }
   .grid-contacto .preguntas:hover .preguntas__p {
     display: block; }
+  @media (max-width: 576px) {
+    .grid-contacto .contacto {
+      width: 100%; } }
 
 /*-----------------footer-----------------*/
 .footer {
@@ -326,9 +351,6 @@
     display: block; }
   .nav__li {
     padding: 5px; }
-  .portada {
-    width: 100%;
-    height: 450px; }
   .iframe-descuentos {
     height: 480px; }
   .titulo-productos {
@@ -337,13 +359,21 @@
     bottom: 0; }
   .productos__img {
     width: 130px; }
+  .portada-productos__img {
+    height: 130px; }
+  .portada-descuentos__img {
+    height: 130px; }
   .titulo-descuentos {
     display: none; } }
 
 /*-----------------tamaño medio-chico-----------------*/
 @media (max-width: 576px) {
   .productos__img {
-    width: 100px; } }
+    width: 100px; }
+  .portada-productos__img {
+    display: none; }
+  .portada-descuentos__img {
+    display: none; } }
 
 /*-----------------tamaño chico-----------------*/
 @media (max-width: 375px) {

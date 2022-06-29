@@ -83,4 +83,10 @@
 		.preguntas:hover .preguntas__p {
 			display: block;
 		}
+
+		@include media-down-m() {
+			.contacto {
+				width: 100%;
+			}
+		}
 }
