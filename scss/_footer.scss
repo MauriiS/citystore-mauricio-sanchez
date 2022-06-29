@@ -12,6 +12,7 @@
 	bottom: 0;
 		.ayuda {
 			display: inline-block;
+			padding-top: 10px;
 		}
 
 		.ayuda__p {
@@ -29,6 +30,7 @@
 
 		.redes {
 			display: inline-block;
+			padding-top: 10px;
 		}
 
 		.redes__p {
@@ -69,5 +71,16 @@
 			color: #000;
 			text-decoration: none;
 			transition: all 1s;
+		}
+
+		.importante__p {
+			font-size: 18px;
+    		padding-top: 10px;
+		}
+
+		.copyright__p {
+			font-size: 22px;
+    		padding-top: 10px;
+    		padding-bottom: 10px;
 		}
 }
