@@ -7,6 +7,7 @@
 	"nuevos-productos nuevos-productos"
 	"i-descuentos i-descuentos"
 	"novedades novedades"
+	"cartas cartas"
 	"footer footer";
 		.portada-inicio {
 		grid-area: portada-inicio;
@@ -22,15 +23,21 @@
 		}
 		.nuevo {
 			font-size: 30px;
+			padding-top: 20px;
 			padding-left: 20px;
+			padding-bottom: 10px;
 		}
 		.desc{
 			font-size: 30px;
+			padding-top: 20px;
 			padding-left: 20px;
+			padding-bottom: 10px;
 		}
 		.nov{
 			font-size: 30px;
+			padding-top: 20px;
 			padding-left: 20px;
+			padding-bottom: 10px;
 		}
 		.nov__p{
 			padding-left: 40px;
@@ -45,5 +52,13 @@
 		.descuentos {
 			color: #000;
 			padding-left: 40px;
+		}
+		.cartas {
+			grid-area: cartas;
+		}
+		.cards__h2 {
+			font-size: 30px;
+			padding-top: 20px;
+			padding-left: 20px;
 		}
 }
