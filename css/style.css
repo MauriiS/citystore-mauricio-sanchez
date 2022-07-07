@@ -233,7 +233,9 @@ body::-webkit-scrollbar-thumb {
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
-    align-items: stretch; }
+    align-items: stretch;
+    padding-top: 50px;
+    padding-bottom: 196px; }
   .grid-carrito .carrito {
     margin-bottom: 15px;
     width: 90%;
